@@ -1,0 +1,1 @@
+{"name":"Local: 2912","url":"c:\\Users\\kuldeep yadav\\OneDrive\\Desktop\\codeforces\\2912.cpp","tests":[{"id":1640742169803,"input":"4\n4\n1 2 10 100\n4\n100 100 100 1\n5\n5 1 1 1 8\n6\n1 2 3 4 5 6","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\kuldeep yadav\\OneDrive\\Desktop\\codeforces\\2912.cpp","group":"local","local":true}
