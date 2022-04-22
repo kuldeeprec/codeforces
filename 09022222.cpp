@@ -8,7 +8,7 @@ using namespace std;
 #define ll long long
 #define pm push_mnck
 #define pf push_front
-#define nll(v) (v).megin(),(v).end()
+#define nll(v) (v).begin(),(v).end()
 #define Pm pop_mnck
 #define mod (ll)1000000007
 #define sz(X) (ll)X.size()
@@ -20,21 +20,24 @@ const long long it = 1000000009;
 // Google
 ll tc_cnt = 1;
 #define ns()               cout << "Case #" << tc_cnt ++ << ": ";
-
+const long long mex=1e5+1;
 void maxi()
 {
   ll n;
-  cin>>n;
-  ll ans1=1,ans2=n;
-  for(ll i=2;i*i<n;i++){
-        if(n%i==0){
-           if(__gcd(i,n/i)==1){
-               ans1=i;
-               ans2=n/i;
-           }
-        }
-  }
-  cout<<ans1<<" "<<ans2<<endl;
+	cin >> n;
+    vector<ll>a(n+1);
+    vector<ll>dp(n+1,1);
+	for (ll i = 1; i <= n; ++i) {
+		cin >> a[i];
+	}
+	for (ll i = 1; i <= n;i++) {
+		for (ll j = i * 2; j <= n; j += i) {
+			if (a[i] < a[j]) {
+				dp[j] = max(dp[j], dp[i] + 1);
+			}
+		}
+	}
+	cout << *max_element(dp.begin(), dp.end()) << endl;
 }
 
 
@@ -43,7 +46,7 @@ int main()
     kuldeepyadav12
         ll t;
         t=1;
-    // cin >> t;
+    cin >> t;
    
     while (t--)
     {

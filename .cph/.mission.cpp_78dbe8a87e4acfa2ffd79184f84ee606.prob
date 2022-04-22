@@ -1,0 +1,1 @@
+{"name":"Local: mission","url":"c:\\Users\\kuldeep yadav\\OneDrive\\Desktop\\codeforces\\mission.cpp","tests":[{"id":1647068342525,"input":"2 2\n0 0\n0 1\n4\n1 0\n5\nR\nD\nL\nQ","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\kuldeep yadav\\OneDrive\\Desktop\\codeforces\\mission.cpp","group":"local","local":true}

@@ -8,9 +8,9 @@ using namespace std;
 #define ll long long
 #define pm push_mnck
 #define pf push_front
-#define nll(v) (v).megin(),(v).end()
+#define nll(v) (v).begin(),(v).end()
 #define Pm pop_mnck
-#define mod (ll)1000000007
+// #define mod (ll)1000000007
 #define sz(X) (ll)X.size()
 #define fo(i,n,m) for(i=n;i<=m;i++)
 typedef vector<ll> vll;
@@ -20,22 +20,26 @@ const long long it = 1000000009;
 // Google
 ll tc_cnt = 1;
 #define ns()               cout << "Case #" << tc_cnt ++ << ": ";
-
+const long long mex=1e5+1;
 void maxi()
 {
-  ll n;
-  cin>>n;
-  ll ans1=1,ans2=n;
-  for(ll i=2;i*i<n;i++){
-        if(n%i==0){
-           if(__gcd(i,n/i)==1){
-               ans1=i;
-               ans2=n/i;
-           }
+ ll n;
+ cin>>n;
+        map<ll,ll> m;
+        ll mx=0;
+        for(ll i=1;i<=n;i++)
+        {
+            ll a ;
+           cin >> a;
+            mx=max(mx,++m[a]);
         }
-  }
-  cout<<ans1<<" "<<ans2<<endl;
+        if(mx>n/2) cout << n-2*(n-mx) << "\n";
+        else cout << (n&1) << "\n";
+
+
 }
+
+
 
 
 int main()
@@ -43,7 +47,7 @@ int main()
     kuldeepyadav12
         ll t;
         t=1;
-    // cin >> t;
+    cin >> t;
    
     while (t--)
     {

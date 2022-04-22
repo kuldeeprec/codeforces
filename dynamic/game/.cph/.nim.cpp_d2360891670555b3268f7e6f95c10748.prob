@@ -1,0 +1,1 @@
+{"name":"Local: nim","url":"c:\\Users\\kuldeep yadav\\OneDrive\\Desktop\\codeforces\\dynamic\\game\\nim.cpp","tests":[{"id":1648115435212,"input":"3\n4\n2\n5\n2\n5\n3","output":"5\n8\n13"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\kuldeep yadav\\OneDrive\\Desktop\\codeforces\\dynamic\\game\\nim.cpp","group":"local","local":true}
