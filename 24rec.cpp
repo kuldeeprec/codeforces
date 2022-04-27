@@ -25,23 +25,43 @@ ans.push_back(s);
 }
 return ans;
 }
-
-void maxi(){
-        string s;
-		cin>>s;
-		
-		bool ok=(s.back()=='B');
-		int sum=0;
-		for (auto it:s){
-			if (it=='A') sum++;
-			else sum--;
-			if (sum<0) ok=false;
-		}
-		
-		if (ok) cout<<"YES"<<endl;
-		else cout<<"NO"<<endl;
+void moveup(vector<vector<char>>&grid,ll col,ll row,ll n){
+     while(grid[row][col]!='o'&&row<n-1){
+         if(grid[row][col]=='*'&&grid[row+1][col]=='.'){
+             swap(grid[row][col],grid[row+1][col]);
+             
+         }
+         row++;
+     }
 }
 
+void maxi(){
+ll n;
+cin>>n;
+vector<ll>v(11,0);
+for(ll i=1;i<=n;i++){
+    ll a,b;
+    cin>>a>>b;
+    if(v[b]<a){
+        v[b]=a;
+    }
+}
+bool ok=true;
+ll ans=0;
+for(ll i=1; i <=10; i++){
+    if(v[i]<=0){
+        ok=false;
+    }
+     ans+=v[i];
+}
+if(ok){
+
+cout<<ans<<endl;
+}
+else{
+  cout<<"MOREPROBLEMS"<<endl;  
+}
+}
 int main()
 {
     kuldeepyadav12

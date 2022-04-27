@@ -9,6 +9,7 @@ using namespace std;
 #define ll long long
 // Google
 ll tc_count = 1;
+#define rep(i, s, e) for (int i = s; i < e; i++)
 #define ns()         cout << "Case #" << tc_count ++ << ": ";
 // split fuction in c++ mode
 vector<string>splitfun(string s,string delimiter){
@@ -25,21 +26,31 @@ ans.push_back(s);
 }
 return ans;
 }
-
+// int n;
+// int arr[200005];
+// int brr[200005];
+// int cnt[200005];
+// vector<int> al[200005];
 void maxi(){
-        string s;
-		cin>>s;
+//    cin>>n;
+// 		rep(x,0,n) cin>>arr[x];
+// 		rep(x,1,n+1) al[x].clear();
+// 		rep(x,1,n+1) cnt[x]=0;
 		
-		bool ok=(s.back()=='B');
-		int sum=0;
-		for (auto it:s){
-			if (it=='A') sum++;
-			else sum--;
-			if (sum<0) ok=false;
-		}
+// 		rep(x,0,n) cnt[arr[x]]++;
 		
-		if (ok) cout<<"YES"<<endl;
-		else cout<<"NO"<<endl;
+// 		int mx=0;
+// 		rep(x,1,n+1) mx=max(mx,cnt[x]);
+		
+// 		rep(x,0,n) brr[x]=arr[x];
+// 		sort(brr,brr+n);
+		
+// 		rep(x,0,n) al[brr[x]].push_back(brr[(x+mx)%n]);
+		
+// 		rep(x,0,n){
+// 			cout<<al[arr[x]].back()<<" \n"[x==n-1];
+// 			al[arr[x]].pop_back();
+// 		}
 }
 
 int main()
@@ -48,7 +59,6 @@ int main()
         ll t;
         t=1;
     cin >> t;
-   
     while (t--)
     {
        maxi();

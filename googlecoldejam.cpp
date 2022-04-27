@@ -26,22 +26,56 @@ ans.push_back(s);
 return ans;
 }
 
-void maxi(){
-        string s;
-		cin>>s;
-		
-		bool ok=(s.back()=='B');
-		int sum=0;
-		for (auto it:s){
-			if (it=='A') sum++;
-			else sum--;
-			if (sum<0) ok=false;
-		}
-		
-		if (ok) cout<<"YES"<<endl;
-		else cout<<"NO"<<endl;
+ll mincost(vector<vector<ll>>&v,ll row,ll col,ll cost,ll n,ll p){
+     if(row<0||row>=n&&col<0||col>=p){
+         return 0;
+     }
+
 }
 
+void maxi(){
+// ll n;
+// cin>>n;
+// vector<ll>v(n);
+// for(ll i=0;i<n;i++){
+//     cin>>v[i];
+// }
+// ll  i=0,j=n-1;
+// ll count=0;
+// ll mini=min(v[0],v[n-1]);
+
+// while(i<=j&&j>=i){
+//     if(v[i]<v[j]){
+//         if(mini<=v[i]){
+//             mini=max(v[i],mini);
+//             count++;
+//         }
+//         i++;
+//     }
+//     else{
+       
+//         if(mini<=v[j]){
+//              mini=max(v[j],mini);
+//             count++;
+//         }
+//         j--;
+//     }
+// }
+// ns();
+// cout<<count<<endl;
+ll n,p;
+cin>>n>>p;
+ll cost=0;
+vector<vector<ll>>v(n,vector<ll>(p));
+for(ll i=0;i< n; i++){
+    for(ll j=0;j< p; j++){
+     cin>>v[i][j];
+    }
+}
+
+ns();
+cout<<cost<<endl;
+}
 int main()
 {
     kuldeepyadav12

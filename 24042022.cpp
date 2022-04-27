@@ -73,12 +73,26 @@ void maxi(){
     //     }
     //     cout << res << "\n";
     // }
-    ll a, b, c, d;
-        cin >> a >> b >> c >> d;
-        cout << (c - a) * (d - b) + 1 << '\n';
+//     ll a, b, c, d;
+//         cin >> a >> b >> c >> d;
+//         cout << (c - a) * (d - b) + 1 << '\n';
+// }
+int n;
+		cin >> n;
+		if (n < 4) {
+			cout << -1 << endl;
+			return;
+		}
+		for (int i = n; i >= 1; --i) {
+			if (i & 1) cout << i << " ";
+		}
+		cout << 4 << " " << 2 << " ";
+		for (int i = 6; i <= n; i += 2) {
+			cout << i << " ";
+		}
+		cout << endl;
+
 }
-
-
 int main()
 {
     kuldeepyadav12
