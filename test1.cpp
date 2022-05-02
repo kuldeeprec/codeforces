@@ -1,44 +1,36 @@
-#include <bits/stdc++.h> 
+#include <bits/stdc++.h>
+
 using namespace std;
 
-using ll = long long;
-const int MX = 2e5;
-
-vector<int> adj[MX  +1];
-int sub[MX + 1], dep[MX + 1], val[MX + 1];
-
-void dfs(int u, int p) {
-	sub[u] = 1;
-	for (auto c : adj[u]) {
-		if (c == p) continue;
-		dep[c] = dep[u] + 1;
-		dfs(c, u);
-		sub[u] += sub[c];
+struct cmp {
+	bool operator() (const pair<int, int> &a, const pair<int, int> &b) const {
+		int lena = a.second - a.first + 1;
+		int lenb = b.second - b.first + 1;
+		if (lena == lenb) return a.first < b.first;
+		return lena > lenb;
 	}
-}
+};
 
-int main() {
-	ios_base::sync_with_stdio(0);
-	cin.tie(0);
-	int n, k;
-	cin >> n >> k;
-	for (int i = 0; i < n - 1; ++i) {
-		int u, v;
-		cin >> u >> v;
-		adj[u].push_back(v);
-		adj[v].push_back(u);
+int main() {	
+	int t;
+	cin >> t;
+	while (t--) {
+		int n;
+		cin >> n;
+		set<pair<int, int>, cmp> segs;
+		segs.insert({0, n - 1});
+		vector<int> a(n);
+		for (int i = 1; i <= n; ++i) {
+			pair<int, int> cur = *segs.begin();
+			segs.erase(segs.begin());
+			int id = (cur.first + cur.second) / 2;
+			a[id] = i;
+			if (cur.first < id) segs.insert({cur.first, id - 1});
+			if (id < cur.second) segs.insert({id + 1, cur.second});
+		}
+		for (auto it : a) cout << it << " ";
+		cout << endl;
 	}
-
-	dfs(1, 0);
 	
-	for (int i = 1; i <= n; ++i) {
-		val[i] = dep[i] - sub[i] + 1;
-	}
-	sort(val + 1, val + 1 + n);
-
-	ll ans = 0;
-	for (int i = 0; i < k; ++i) {
-		ans += val[n - i];
-	}
-	cout << ans << '\n';
+	return 0;
 }

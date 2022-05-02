@@ -31,6 +31,14 @@ return ans;
 // int brr[200005];
 // int cnt[200005];
 // vector<int> al[200005];
+struct cmp {
+	bool operator() (const pair<int, int> &a, const pair<int, int> &b) const {
+		int lena = a.second - a.first + 1;
+		int lenb = b.second - b.first + 1;
+		if (lena == lenb) return a.first < b.first;
+		return lena > lenb;
+	}
+};
 void maxi(){
 //    cin>>n;
 // 		rep(x,0,n) cin>>arr[x];
@@ -51,6 +59,25 @@ void maxi(){
 // 			cout<<al[arr[x]].back()<<" \n"[x==n-1];
 // 			al[arr[x]].pop_back();
 // 		}
+
+int n;
+		cin >> n;
+		set<pair<int, int>, cmp> st;
+		st.insert({0, n - 1});
+		vector<int> a(n);
+		for (int i = 1; i <= n; ++i) {
+			pair<int, int> cur = *st.begin();
+			st.erase(st.begin());
+			int id = (cur.first + cur.second) / 2;
+			a[id] = i;
+			if (cur.first < id) st.insert({cur.first, id - 1});
+			if (id < cur.second) st.insert({id + 1, cur.second});
+		}
+for(auto i:a){
+    cout<<i<<" ";
+}
+cout<<endl;
+
 }
 
 int main()
