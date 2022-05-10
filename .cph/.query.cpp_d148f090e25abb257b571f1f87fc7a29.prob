@@ -1,0 +1,1 @@
+{"name":"Local: query","url":"c:\\Users\\kuldeep yadav\\OneDrive\\Desktop\\codeforces\\query.cpp","tests":[{"id":1652080916384,"input":"1\n5\n1 2 3 4 5\n2\n1 5 4\n2 5 2\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\kuldeep yadav\\OneDrive\\Desktop\\codeforces\\query.cpp","group":"local","local":true}
