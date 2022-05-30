@@ -13,7 +13,9 @@ ll tc_count = 1;
 // split fuction in c++ mode
 string repeat(string s, int n)
 {
-    
+    if(n==0){
+        return "";
+    }
     string s1 = s;
  
     for (int i=1; i<n;i++)
@@ -44,10 +46,10 @@ for(int i=0;i<n;i++){
         cout<<"D";
     }
     if(i&1){ 
-        cout<<repeat("R",m-1);
+        cout<<repeat("L",m-1);
     }
     else{
-        cout<<repeat("L",m-1);
+        cout<<repeat("R",m-1);
     }
 }
 
