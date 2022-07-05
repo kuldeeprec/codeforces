@@ -1,0 +1,1 @@
+{"name":"Local: nitorz","url":"c:\\Users\\kuldeep yadav\\OneDrive\\Desktop\\codeforces\\nitorz.cpp","tests":[{"id":1656168591066,"input":"4\n4\n0 0 0 0\n5\n0 1 2 3 4\n7\n0 2 3 0 1 2 0\n7\n3 4 0 6 0 8 0","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\kuldeep yadav\\OneDrive\\Desktop\\codeforces\\nitorz.cpp","group":"local","local":true}
