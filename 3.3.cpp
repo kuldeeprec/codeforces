@@ -29,6 +29,10 @@ bool isToeplitz(vector<vector<int>> matrix)
 				// matches to element at current
 				// index or not. If not, return
 				// false
+
+
+
+				
 				if (Map[key] != matrix[i][j])
 					return false;
 			}
